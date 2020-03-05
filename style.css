@@ -17,3 +17,10 @@
     display: inline-block;
     font-size: 16px;
 }
+.result {
+    color: blue;
+}
+.result.error {
+    color: red;
+    font-weight: bold;
+}

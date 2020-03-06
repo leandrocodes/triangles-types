@@ -11,25 +11,21 @@ btn.addEventListener('click', () => {
     if (side1.value <= 0 || side2.value <= 0 || side3.value <= 0) {
       result.classList.add('error')
       result.style.display = 'block'
-      result.innerText = 'Erro! Não pode número menores que zero!'
+      result.innerText = 'Erro! Não pode número menores ou iguais a zero!'
     } else {
       if (side1.value === side2.value && side1.value === side3.value && side2.value === side3.value) {
         result.style.display = 'block'
         result.innerText = 'O trinângulo é equilátero'
-      }
-
-      else if (side1.value === side2.value || side2.value === side3.value || side1.value === side3.value) {
+      } else if (side1.value === side2.value || side2.value === side3.value || side1.value === side3.value) {
         result.style.display = 'block'
         result.innerText = 'O triângulo é isóceles'
-      }
-
-      else if (side1.value !== side2.value && side1.value !== side3.value && side2.value !== side3.value) {
+      } else if (side1.value !== side2.value && side1.value !== side3.value && side2.value !== side3.value) {
         result.style.display = 'block'
         result.innerText = 'O triângulo é escaleno'
       }
     }
   } else {
-    result.innerText = 'Somente caracteres são válidos'
+    result.innerText = 'Somente números inteiros ou reais são definidos'
     result.classList.add('error')
   }
 })
